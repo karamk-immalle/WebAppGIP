@@ -33,6 +33,13 @@ namespace IDMB
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
+            services.AddAuthentication().AddGoogle(googleOptions =>
+            {
+                googleOptions.ClientId = "729867629642-vqidulbfm25lp42p6vl5sefgkve45r7b.apps.googleusercontent.com";
+                googleOptions.ClientSecret = "P5vO3Yp6-29foxNvO7cc-X21";
+
+            });
+            
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
 

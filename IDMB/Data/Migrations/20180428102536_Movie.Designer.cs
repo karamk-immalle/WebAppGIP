@@ -11,9 +11,10 @@ using System;
 namespace IDMB.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180428102536_Movie")]
+    partial class Movie
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -85,46 +86,6 @@ namespace IDMB.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Movie");
-                });
-
-            modelBuilder.Entity("IDMB.Models.TopBoxOffice", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Gross");
-
-                    b.Property<int>("Rank");
-
-                    b.Property<string>("Title");
-
-                    b.Property<int>("Week");
-
-                    b.Property<string>("Weekend");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("TopBoxOffice");
-                });
-
-            modelBuilder.Entity("IDMB.Models.TvShows", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("AantalAflevering");
-
-                    b.Property<DateTime>("DatumVanPublicatie");
-
-                    b.Property<string>("Genre")
-                        .IsRequired();
-
-                    b.Property<string>("Naam")
-                        .IsRequired();
-
-                    b.HasKey("Id");
-
-                    b.ToTable("TvShows");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

@@ -22,5 +22,11 @@ namespace IDMB.Data
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
         }
+
+        public DbSet<IDMB.Models.Movie> Movie { get; set; }
+
+        public DbSet<IDMB.Models.TvShows> TvShows { get; set; }
+
+        public DbSet<IDMB.Models.TopBoxOffice> TopBoxOffice { get; set; }
     }
 }
