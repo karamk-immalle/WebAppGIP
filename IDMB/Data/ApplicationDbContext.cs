@@ -28,5 +28,7 @@ namespace IDMB.Data
         public DbSet<IDMB.Models.TvShows> TvShows { get; set; }
 
         public DbSet<IDMB.Models.TopBoxOffice> TopBoxOffice { get; set; }
+
+        public DbSet<IDMB.Models.ApplicationUser> ApplicationUser { get; set; }
     }
 }
